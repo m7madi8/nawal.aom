@@ -62,7 +62,7 @@ const workshops = [
     title: 'Al-Tira Yoga',
     description: 'Experience freedom in the air. Suspension-based practice for strength, flexibility and playfulness—suitable for all levels.',
     cta: 'Discover more',
-    image: '/media/al-tira.jpg'
+    image: '/media/Al-Tira.jpg'
   },
   {
     id: 'jiva',
@@ -70,7 +70,7 @@ const workshops = [
     title: 'Jiva Yoga',
     description: 'Connect body, breath and mind. A holistic approach blending movement, meditation and mindfulness in a supportive space.',
     cta: 'Learn more',
-    image: '/media/jiva.jpg'
+    image: '/media/Jiva.jpg'
   },
   {
     id: 'retreat',
