@@ -21,6 +21,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Yoga with a certified instructor. Vinyasa, Yin, Hatha & meditation—private and group sessions, workshops and retreats. Yoga for everyone.' }
       ],
       link: [
+        { rel: 'icon', type: 'image/png', href: '/media/Nawal_yoga_logo.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
