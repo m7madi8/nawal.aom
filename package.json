@@ -8,7 +8,6 @@
     "build": "nuxt build",
     "preview": "nuxt preview",
     "lint": "eslint .",
-    "postinstall": "npx nuxt prepare",
     "download-images": "node scripts/download-images.mjs"
   },
   "dependencies": {
