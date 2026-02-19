@@ -1,8 +1,0 @@
-const AboutSection_vue_vue_type_style_index_0_scoped_0b393a58_lang = ".about-section[data-v-0b393a58]{position:relative}.image-container[data-v-0b393a58]{transition:transform .3s ease}.trainer-image[data-v-0b393a58]{transition:transform .6s cubic-bezier(.4,0,.2,1)}.stat-item[data-v-0b393a58]{transition:transform .2s ease}.stat-item[data-v-0b393a58]:hover{transform:translateY(-2px)}.key-point[data-v-0b393a58]{transition:transform .2s ease}.key-point[data-v-0b393a58]:hover{transform:translate(4px)}.about-content[data-v-0b393a58]{color:var(--text-main)}@media(max-width:1023px){.trainer-image-wrapper[data-v-0b393a58]{margin:0 auto;max-width:400px}}";
-
-const AboutSectionStyles_B68K5IqT = [
-  AboutSection_vue_vue_type_style_index_0_scoped_0b393a58_lang
-];
-
-export { AboutSectionStyles_B68K5IqT as default };
-//# sourceMappingURL=AboutSection-styles.B68K5IqT.mjs.map
