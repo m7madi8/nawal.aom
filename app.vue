@@ -13,7 +13,7 @@
       aria-label="Audio permission"
     >
       <p class="text-sm font-medium text-[var(--color-secondary)]">
-        Enable sound for the intro video?
+        Would you like to enable sound for videos on this device?
       </p>
       <div class="mt-3 flex items-center justify-end gap-2">
         <button
@@ -21,7 +21,7 @@
           class="rounded-lg border border-[var(--color-primary)]/40 px-3 py-1.5 text-sm text-[var(--color-secondary)] transition hover:bg-[var(--color-primary)]/10"
           @click="declineAudio"
         >
-          Not now
+          Later
         </button>
         <button
           type="button"
@@ -39,6 +39,8 @@
 const appConfig = useAppConfig()
 const audioConsent = useState<'accepted' | 'declined' | null>('audio-consent', () => null)
 const showAudioPrompt = ref(false)
+let unlockAudioOnInteraction: (() => void) | null = null
+const AUDIO_CONSENT_KEY = 'audio-consent-v2'
 
 const handleKeyDown = (e: KeyboardEvent) => {
   const target = e.target as HTMLElement
@@ -87,29 +89,45 @@ onMounted(() => {
   document.documentElement.style.scrollBehavior = 'auto'
   document.addEventListener('keydown', handleKeyDown)
 
-  const savedConsent = localStorage.getItem('audio-consent')
+  const savedConsent = localStorage.getItem(AUDIO_CONSENT_KEY)
   if (savedConsent === 'accepted' || savedConsent === 'declined') {
     audioConsent.value = savedConsent
     showAudioPrompt.value = false
   } else {
     showAudioPrompt.value = true
   }
+
+  const emitAudioUnlock = () => {
+    window.dispatchEvent(new CustomEvent('audio-consent-unlock'))
+  }
+
+  if (audioConsent.value === 'accepted') {
+    unlockAudioOnInteraction = emitAudioUnlock
+    window.addEventListener('pointerdown', unlockAudioOnInteraction, { once: true })
+    window.addEventListener('keydown', unlockAudioOnInteraction, { once: true })
+  }
 })
 
 onUnmounted(() => {
   if (!import.meta.client) return
   document.removeEventListener('keydown', handleKeyDown)
+  if (unlockAudioOnInteraction) {
+    window.removeEventListener('pointerdown', unlockAudioOnInteraction)
+    window.removeEventListener('keydown', unlockAudioOnInteraction)
+    unlockAudioOnInteraction = null
+  }
 })
 
 const acceptAudio = () => {
   audioConsent.value = 'accepted'
-  if (import.meta.client) localStorage.setItem('audio-consent', 'accepted')
+  if (import.meta.client) localStorage.setItem(AUDIO_CONSENT_KEY, 'accepted')
   showAudioPrompt.value = false
+  window.dispatchEvent(new CustomEvent('audio-consent-unlock'))
 }
 
 const declineAudio = () => {
   audioConsent.value = 'declined'
-  if (import.meta.client) localStorage.setItem('audio-consent', 'declined')
+  if (import.meta.client) localStorage.setItem(AUDIO_CONSENT_KEY, 'declined')
   showAudioPrompt.value = false
 }
 </script>

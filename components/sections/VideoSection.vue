@@ -37,6 +37,46 @@
                     >
                       Your browser does not support the video tag.
                     </video>
+
+                    <button
+                      type="button"
+                      class="audio-toggle absolute right-3 top-3 z-10 inline-flex items-center gap-2 rounded-full px-3 py-2 text-xs font-medium text-white"
+                      :aria-pressed="!isMuted"
+                      :aria-label="isMuted ? 'Unmute video' : 'Mute video'"
+                      @click="toggleAudio"
+                    >
+                      <span class="audio-toggle__icon" aria-hidden="true">
+                        <svg
+                          v-if="isMuted"
+                          viewBox="0 0 24 24"
+                          class="h-3.5 w-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M11 5L6 9H3v6h3l5 4V5z" />
+                          <path d="M22 9L16 15" />
+                          <path d="M16 9L22 15" />
+                        </svg>
+                        <svg
+                          v-else
+                          viewBox="0 0 24 24"
+                          class="h-3.5 w-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M11 5L6 9H3v6h3l5 4V5z" />
+                          <path d="M15 9a5 5 0 0 1 0 6" />
+                          <path d="M18 7a8 8 0 0 1 0 10" />
+                        </svg>
+                      </span>
+                      <span class="audio-toggle__label">{{ isMuted ? 'Muted' : 'Live audio' }}</span>
+                    </button>
                   </div>
                   <div class="absolute inset-x-0 bottom-0 h-16 pointer-events-none rounded-b-2xl bg-gradient-to-t from-black/15 to-transparent" />
                 </div>
@@ -72,10 +112,36 @@
 
 <script setup lang="ts">
 const { el: revealEl, isVisible: isRevealed } = useScrollReveal({ threshold: 0.1 })
-const audioConsent = useState<'accepted' | 'declined' | null>('audio-consent', () => null)
+const audioConsent = useState<'accepted' | 'declined' | null>('audio-consent-v2', () => null)
 const videoEl = ref<HTMLVideoElement | null>(null)
+const isMuted = ref(true)
 let observer: IntersectionObserver | null = null
 let isInViewport = false
+let removeUnlockListener: (() => void) | null = null
+let stopConsentWatch: (() => void) | null = null
+
+const AUDIO_CONSENT_KEY = 'audio-consent-v2'
+
+const toggleAudio = async () => {
+  const video = videoEl.value
+  if (!video) return
+
+  const nextMuted = !video.muted
+  video.muted = nextMuted
+  isMuted.value = nextMuted
+
+  if (!nextMuted) {
+    audioConsent.value = 'accepted'
+    if (import.meta.client) localStorage.setItem(AUDIO_CONSENT_KEY, 'accepted')
+  }
+
+  try {
+    await video.play()
+  } catch {
+    video.muted = true
+    isMuted.value = true
+  }
+}
 
 onMounted(() => {
   if (!import.meta.client || !videoEl.value) return
@@ -83,26 +149,43 @@ onMounted(() => {
   const video = videoEl.value
   video.defaultMuted = true
   video.muted = true
+  isMuted.value = true
 
   const syncAudioMode = () => {
     if (audioConsent.value === 'accepted' && isInViewport) {
       video.muted = false
+      isMuted.value = false
       video.play().catch(() => {
         video.muted = true
+        isMuted.value = true
         video.play().catch(() => {})
       })
       return
     }
 
     video.muted = true
+    isMuted.value = true
     if (isInViewport) {
       video.play().catch(() => {})
     }
   }
 
+  const handleUnlock = () => {
+    if (audioConsent.value !== 'accepted') return
+    if (!isInViewport) return
+    video.muted = false
+    isMuted.value = false
+    video.play().catch(() => {
+      video.muted = true
+      isMuted.value = true
+    })
+  }
+
   // Start fetching video data as soon as the page is mounted.
   video.load()
   video.play().catch(() => {})
+  window.addEventListener('audio-consent-unlock', handleUnlock)
+  removeUnlockListener = () => window.removeEventListener('audio-consent-unlock', handleUnlock)
 
   observer = new IntersectionObserver(
     (entries) => {
@@ -119,7 +202,7 @@ onMounted(() => {
   )
   observer.observe(video)
 
-  watch(audioConsent, () => {
+  stopConsentWatch = watch(audioConsent, () => {
     syncAudioMode()
   })
 })
@@ -127,6 +210,10 @@ onMounted(() => {
 onUnmounted(() => {
   observer?.disconnect()
   observer = null
+  removeUnlockListener?.()
+  removeUnlockListener = null
+  stopConsentWatch?.()
+  stopConsentWatch = null
 })
 </script>
 
@@ -137,5 +224,33 @@ onUnmounted(() => {
 .video-frame video {
   display: block;
   border-radius: inherit;
+}
+
+.audio-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.22));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.audio-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(0, 0, 0, 0.2));
+}
+
+.audio-toggle:active {
+  transform: translateY(0);
+}
+
+.audio-toggle__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-toggle__label {
+  letter-spacing: 0.02em;
 }
 </style>
