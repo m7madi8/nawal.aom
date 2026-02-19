@@ -1,6 +1,6 @@
 // Nuxt 3 configuration for cinematic yoga retreat site
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   devtools: { enabled: false },
   compatibilityDate: '2026-02-19',
   components: [
