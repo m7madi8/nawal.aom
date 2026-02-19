@@ -95,7 +95,7 @@ const open = ref(false)
 
 watch(open, (isOpen) => {
   if (import.meta.client) {
-    document.body.style.overflow = isOpen ? 'hidden' : ''
+    document.documentElement.style.overflow = isOpen ? 'hidden' : ''
   }
 })
 </script>

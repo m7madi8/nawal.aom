@@ -33,6 +33,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/media/Nawal_yoga_logo.png' },
+        { rel: 'preload', as: 'video', href: '/media/nawal_aom.mp4', type: 'video/mp4' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {

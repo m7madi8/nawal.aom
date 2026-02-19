@@ -28,7 +28,10 @@
                       ref="videoEl"
                       class="h-full w-full object-cover"
                       src="/media/nawal_aom.mp4"
+                      autoplay
+                      muted
                       playsinline
+                      webkit-playsinline="true"
                       loop
                       preload="auto"
                     >
@@ -69,20 +72,44 @@
 
 <script setup lang="ts">
 const { el: revealEl, isVisible: isRevealed } = useScrollReveal({ threshold: 0.1 })
+const audioConsent = useState<'accepted' | 'declined' | null>('audio-consent', () => null)
 const videoEl = ref<HTMLVideoElement | null>(null)
 let observer: IntersectionObserver | null = null
+let isInViewport = false
 
 onMounted(() => {
   if (!import.meta.client || !videoEl.value) return
 
   const video = videoEl.value
+  video.defaultMuted = true
+  video.muted = true
+
+  const syncAudioMode = () => {
+    if (audioConsent.value === 'accepted' && isInViewport) {
+      video.muted = false
+      video.play().catch(() => {
+        video.muted = true
+        video.play().catch(() => {})
+      })
+      return
+    }
+
+    video.muted = true
+    if (isInViewport) {
+      video.play().catch(() => {})
+    }
+  }
+
   // Start fetching video data as soon as the page is mounted.
   video.load()
+  video.play().catch(() => {})
+
   observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        isInViewport = entry.isIntersecting
         if (entry.isIntersecting) {
-          video.play().catch(() => {})
+          syncAudioMode()
         } else {
           video.pause()
         }
@@ -91,6 +118,10 @@ onMounted(() => {
     { threshold: 0.25, rootMargin: '0px' }
   )
   observer.observe(video)
+
+  watch(audioConsent, () => {
+    syncAudioMode()
+  })
 })
 
 onUnmounted(() => {
