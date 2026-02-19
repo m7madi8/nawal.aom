@@ -39,7 +39,15 @@
                 </div>
                 <p class="workshop-card-desc">{{ workshop.description }}</p>
                 <div class="workshop-card-footer">
-                  <span class="workshop-card-cta">
+                  <NuxtLink
+                    v-if="workshop.to"
+                    :to="workshop.to"
+                    class="workshop-card-cta"
+                  >
+                    {{ workshop.cta }}
+                    <span class="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  </NuxtLink>
+                  <span v-else class="workshop-card-cta">
                     {{ workshop.cta }}
                     <span class="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
                   </span>
@@ -78,7 +86,8 @@ const workshops = [
     title: 'Retreat',
     description: 'Step away from the everyday. Multi-day yoga retreats in nature—deep practice, rest and connection with like-minded souls.',
     cta: 'Explore retreats',
-    image: '/media/retreat.jpg'
+    image: '/media/retreat.jpg',
+    to: '/retreat'
   }
 ]
 </script>
