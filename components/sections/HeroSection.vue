@@ -93,6 +93,7 @@
 const sectionEl = ref<HTMLElement | null>(null)
 const bgEl = ref<HTMLElement | null>(null)
 const contentEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -100,8 +101,6 @@ const { prefersReducedMotion } = useReducedMotion()
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     // Enhanced entrance animations
@@ -210,11 +209,11 @@ onMounted(() => {
         delay: index * 0.5
       })
     })
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
 })
 </script>
 

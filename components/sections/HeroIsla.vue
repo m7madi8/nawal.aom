@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-luxury relative min-h-[100vh] min-h-[100dvh] overflow-hidden">
+  <section class="hero-luxury relative min-h-[100svh] md:min-h-[100dvh] overflow-hidden">
     <!-- Background -->
     <div class="absolute inset-0 hero-bg-wrap">
       <img
@@ -17,11 +17,11 @@
     <div class="hero-line absolute left-8 top-1/2 z-10 hidden h-24 w-px -translate-y-1/2 bg-white/20 md:left-12 lg:left-16 xl:block" />
 
     <!-- Content -->
-    <div class="relative z-10 flex min-h-[100vh] min-h-[100dvh] items-center">
+    <div class="relative z-10 flex min-h-[100svh] md:min-h-[100dvh] items-center">
       <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 md:px-10 lg:px-16">
         <div class="max-w-2xl">
           <!-- Logo -->
-          <div class="hero-item hero-item-1 logo-hero -mt-8 mb-5 inline-block sm:-mt-10 sm:mb-6 md:-mt-12 md:mb-6">
+          <div class="hero-item hero-item-1 logo-hero -mt-14 mb-1 inline-block sm:-mt-10 sm:mb-2 md:-mt-12 md:mb-2">
             <img
               src="/media/Nawal_yoga_logo.png"
               alt="Nawal Yoga"
@@ -30,7 +30,7 @@
           </div>
 
           <!-- Eyebrow -->
-          <div class="hero-item hero-item-2 mb-8 flex items-center gap-4">
+          <div class="hero-item hero-item-2 mb-5 flex items-center gap-4">
             <span class="h-6 w-px shrink-0 bg-white/40" aria-hidden="true" />
             <span class="h-px w-12 shrink-0 bg-white/40" aria-hidden="true" />
             <p class="text-xs font-medium uppercase tracking-[0.4em] text-white/80">
@@ -74,14 +74,7 @@
     </div>
 
     <!-- Bottom: scroll + location hint -->
-    <div class="hero-bottom absolute bottom-0 left-0 right-0 z-10 flex items-end justify-between px-5 pb-8 sm:px-8 md:px-10 lg:px-16">
-      <a
-        href="#about"
-        class="flex flex-col items-center gap-3 text-white/50 transition hover:text-white/80"
-      >
-        <span class="text-[10px] font-medium uppercase tracking-[0.35em]">Scroll</span>
-        <span class="block h-10 w-px bg-gradient-to-b from-white/40 to-transparent" />
-      </a>
+    <div class="hero-bottom absolute bottom-0 left-0 right-0 z-10 flex items-end justify-end px-5 pb-8 sm:px-8 md:px-10 lg:px-16">
       <p class="text-[11px] font-medium uppercase tracking-[0.3em] text-white/40">
         Private · group · retreats
       </p>

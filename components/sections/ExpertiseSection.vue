@@ -5,7 +5,7 @@
         مجالاتنا
       </h2>
       <div class="relative">
-        <div class="flex gap-6 overflow-x-auto pb-4 no-scrollbar md:gap-8">
+        <div class="flex gap-6 overflow-x-auto pb-4 md:gap-8">
           <article
             v-for="(item, index) in expertise"
             :key="index"

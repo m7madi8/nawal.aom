@@ -49,6 +49,7 @@ const sectionEl = ref<HTMLElement | null>(null)
 const pinnedEl = ref<HTMLElement | null>(null)
 const bgEl = ref<HTMLElement | null>(null)
 const copyEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger, matchMedia } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -56,8 +57,6 @@ const { prefersReducedMotion } = useReducedMotion()
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     const mm = matchMedia
@@ -158,12 +157,12 @@ onMounted(() => {
     } else {
       setupMobileScroll()
     }
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-    matchMedia?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
+  matchMedia?.revert()
 })
 </script>
 

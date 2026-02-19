@@ -47,6 +47,7 @@
 <script setup lang="ts">
 const sectionEl = ref<HTMLElement | null>(null)
 const cardsEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger, matchMedia } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -81,8 +82,6 @@ const experiences = [
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     const cards = gsap.utils.toArray<HTMLElement>('.experience-card')
@@ -129,12 +128,12 @@ onMounted(() => {
     } else {
       animateCards()
     }
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-    matchMedia?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
+  matchMedia?.revert()
 })
 </script>
 

@@ -76,6 +76,7 @@ const sectionEl = ref<HTMLElement | null>(null)
 const mediaEl = ref<HTMLElement | null>(null)
 const imageStackEl = ref<HTMLElement | null>(null)
 const copyEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -118,8 +119,6 @@ const twoDigits = (value: number) => value.toString().padStart(2, '0')
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     // Align sticky/pinned behavior with the two-column (md+) layout
@@ -175,11 +174,11 @@ onMounted(() => {
         pinSpacing: false
       })
     }
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
 })
 </script>
 

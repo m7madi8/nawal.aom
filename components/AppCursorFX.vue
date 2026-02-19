@@ -17,6 +17,9 @@ const x = ref(0)
 const y = ref(0)
 const scale = ref(1)
 const isTouch = ref(false)
+let handleMove: ((event: MouseEvent) => void) | null = null
+let handleLeave: (() => void) | null = null
+let handleEnter: (() => void) | null = null
 
 const { prefersReducedMotion } = useReducedMotion()
 
@@ -32,29 +35,29 @@ onMounted(() => {
     return
   }
 
-  const handleMove = (event: MouseEvent) => {
+  handleMove = (event: MouseEvent) => {
     x.value = event.clientX
     y.value = event.clientY
     scale.value = 1.1
   }
 
-  const handleLeave = () => {
+  handleLeave = () => {
     scale.value = 0.8
   }
 
-  const handleEnter = () => {
+  handleEnter = () => {
     scale.value = 1
   }
 
   window.addEventListener('mousemove', handleMove)
   window.addEventListener('mouseleave', handleLeave)
   window.addEventListener('mouseenter', handleEnter)
+})
 
-  onBeforeUnmount(() => {
-    window.removeEventListener('mousemove', handleMove)
-    window.removeEventListener('mouseleave', handleLeave)
-    window.removeEventListener('mouseenter', handleEnter)
-  })
+onBeforeUnmount(() => {
+  if (handleMove) window.removeEventListener('mousemove', handleMove)
+  if (handleLeave) window.removeEventListener('mouseleave', handleLeave)
+  if (handleEnter) window.removeEventListener('mouseenter', handleEnter)
 })
 </script>
 

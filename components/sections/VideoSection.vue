@@ -30,7 +30,7 @@
                       src="/media/nawal_aom.mp4"
                       playsinline
                       loop
-                      preload="metadata"
+                      preload="auto"
                     >
                       Your browser does not support the video tag.
                     </video>
@@ -70,25 +70,32 @@
 <script setup lang="ts">
 const { el: revealEl, isVisible: isRevealed } = useScrollReveal({ threshold: 0.1 })
 const videoEl = ref<HTMLVideoElement | null>(null)
+let observer: IntersectionObserver | null = null
 
 onMounted(() => {
-  if (import.meta.client && videoEl.value) {
-    const video = videoEl.value
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play().catch(() => {})
-          } else {
-            video.pause()
-          }
-        })
-      },
-      { threshold: 0.25, rootMargin: '0px' }
-    )
-    observer.observe(video)
-    onUnmounted(() => observer.disconnect())
-  }
+  if (!import.meta.client || !videoEl.value) return
+
+  const video = videoEl.value
+  // Start fetching video data as soon as the page is mounted.
+  video.load()
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {})
+        } else {
+          video.pause()
+        }
+      })
+    },
+    { threshold: 0.25, rootMargin: '0px' }
+  )
+  observer.observe(video)
+})
+
+onUnmounted(() => {
+  observer?.disconnect()
+  observer = null
 })
 </script>
 

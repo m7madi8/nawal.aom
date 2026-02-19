@@ -103,6 +103,7 @@
 const sectionEl = ref<HTMLElement | null>(null)
 const imageEl = ref<HTMLElement | null>(null)
 const contentEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -127,8 +128,6 @@ const displayStyles = ref(0)
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     // Image animation
@@ -290,11 +289,11 @@ onMounted(() => {
         }
       })
     }
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
 })
 </script>
 

@@ -53,6 +53,7 @@
 <script setup lang="ts">
 const sectionEl = ref<HTMLElement | null>(null)
 const contentEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger, matchMedia } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -60,8 +61,6 @@ const { prefersReducedMotion } = useReducedMotion()
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     if (!sectionEl.value || !contentEl.value) return
@@ -105,12 +104,12 @@ onMounted(() => {
     } else {
       animateFooter('top 90%')
     }
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-    matchMedia?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
+  matchMedia?.revert()
 })
 </script>
 

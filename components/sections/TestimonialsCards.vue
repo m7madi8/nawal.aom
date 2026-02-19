@@ -2,7 +2,7 @@
   <section id="testimonials" class="scroll-mt-20 bg-[var(--color-background)] py-16 md:py-24">
     <AppContainer>
       <div class="relative">
-        <div class="flex gap-6 overflow-x-auto pb-4 no-scrollbar md:gap-8">
+        <div class="flex gap-6 overflow-x-auto pb-4 md:gap-8">
           <article
             v-for="t in testimonials"
             :key="t.id"

@@ -42,6 +42,7 @@
 <script setup lang="ts">
 const sectionEl = ref<HTMLElement | null>(null)
 const gridEl = ref<HTMLElement | null>(null)
+let ctx: any
 
 const { gsap, ScrollTrigger } = useGsap()
 const { prefersReducedMotion } = useReducedMotion()
@@ -61,8 +62,6 @@ const galleryImages = [
 onMounted(() => {
   if (!gsap || !ScrollTrigger) return
   if (prefersReducedMotion.value) return
-
-  let ctx: any
 
   ctx = gsap.context(() => {
     const items = gsap.utils.toArray<HTMLElement>('.gallery-item')
@@ -89,11 +88,11 @@ onMounted(() => {
         }
       }
     )
-  }, sectionEl)
+  }, sectionEl.value ?? undefined)
+})
 
-  onBeforeUnmount(() => {
-    ctx?.revert()
-  })
+onBeforeUnmount(() => {
+  ctx?.revert()
 })
 </script>
 
