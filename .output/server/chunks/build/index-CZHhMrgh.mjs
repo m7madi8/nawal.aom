@@ -1,0 +1,851 @@
+import { _ as __nuxt_component_0$1 } from './nuxt-link-jm6wEUIt.mjs';
+import { mergeProps, withCtx, createVNode, createTextVNode, defineComponent, ref, resolveComponent, unref, openBlock, createBlock, Fragment, renderList, toDisplayString, useSSRContext } from 'vue';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderList, ssrInterpolate, ssrRenderClass, ssrRenderStyle } from 'vue/server-renderer';
+import { p as publicAssetsURL } from '../_/nitro.mjs';
+import { _ as _export_sfc } from './_plugin-vue_export-helper-1tPrXgE0.mjs';
+import { b as useReducedMotion, a as useNuxtApp } from './server.mjs';
+import 'node:http';
+import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'node:fs';
+import 'node:url';
+import 'ipx';
+import 'node:path';
+import 'node:crypto';
+import 'vue-router';
+import '../routes/renderer.mjs';
+import 'vue-bundle-renderer/runtime';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/utils';
+
+const _imports_0$3 = publicAssetsURL("/media/hero.jpg");
+const _imports_0$2 = publicAssetsURL("/media/Nawal_yoga_logo.png");
+const _sfc_main$6 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+  const _component_NuxtLink = __nuxt_component_0$1;
+  _push(`<section${ssrRenderAttrs(mergeProps({ class: "hero-luxury relative min-h-[100vh] min-h-[100dvh] overflow-hidden" }, _attrs))} data-v-58b8b470><div class="absolute inset-0 hero-bg-wrap" data-v-58b8b470><img${ssrRenderAttr("src", _imports_0$3)} alt="" class="hero-bg h-full w-full object-cover object-center" loading="eager" data-v-58b8b470><div class="absolute inset-0 bg-[var(--color-secondary)]/60 hero-overlay" data-v-58b8b470></div><div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[var(--color-secondary)]/85" data-v-58b8b470></div><div class="hero-vignette absolute inset-0" data-v-58b8b470></div></div><div class="hero-line absolute left-8 top-1/2 z-10 hidden h-24 w-px -translate-y-1/2 bg-white/20 md:left-12 lg:left-16 xl:block" data-v-58b8b470></div><div class="relative z-10 flex min-h-[100vh] min-h-[100dvh] items-center" data-v-58b8b470><div class="mx-auto w-full max-w-6xl px-5 sm:px-8 md:px-10 lg:px-16" data-v-58b8b470><div class="max-w-2xl" data-v-58b8b470><div class="hero-item hero-item-1 logo-hero -mt-8 mb-5 inline-block sm:-mt-10 sm:mb-6 md:-mt-12 md:mb-6" data-v-58b8b470><img${ssrRenderAttr("src", _imports_0$2)} alt="Nawal Yoga" class="h-20 w-auto max-w-[260px] object-contain sm:h-24 sm:max-w-[300px] md:h-[88px] md:max-w-[340px] lg:h-24 lg:max-w-[360px]" data-v-58b8b470></div><div class="hero-item hero-item-2 mb-8 flex items-center gap-4" data-v-58b8b470><span class="h-6 w-px shrink-0 bg-white/40" aria-hidden="true" data-v-58b8b470></span><span class="h-px w-12 shrink-0 bg-white/40" aria-hidden="true" data-v-58b8b470></span><p class="text-xs font-medium uppercase tracking-[0.4em] text-white/80" data-v-58b8b470> Yoga · Mindfulness · Retreat </p></div><h1 class="hero-item hero-item-3 hero-headline mb-8 font-serif text-5xl font-light leading-[1.12] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl" data-v-58b8b470><span class="block" data-v-58b8b470>Change begins</span><span class="block mt-1 text-white/95" data-v-58b8b470>here</span></h1><div class="hero-item hero-item-4 mb-8 h-px w-20 bg-white/30" data-v-58b8b470></div><p class="hero-item hero-item-5 mb-12 max-w-md text-lg leading-relaxed text-white/85 md:text-xl" data-v-58b8b470> Exceptional yoga with a certified instructor. Vinyasa, Yin, Hatha &amp; meditation—in a calm studio or in nature. </p><div class="hero-item hero-item-6 flex flex-wrap items-center gap-6" data-v-58b8b470>`);
+  _push(ssrRenderComponent(_component_NuxtLink, {
+    to: "#about",
+    class: "group inline-flex min-h-[54px] items-center justify-center rounded-sm bg-white px-10 text-[15px] font-medium tracking-wide text-[var(--color-secondary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:shadow-2xl"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<span data-v-58b8b470${_scopeId}>Book your session</span><span class="ml-2 transition-transform duration-300 group-hover:translate-x-1" data-v-58b8b470${_scopeId}>→</span>`);
+      } else {
+        return [
+          createVNode("span", null, "Book your session"),
+          createVNode("span", { class: "ml-2 transition-transform duration-300 group-hover:translate-x-1" }, "→")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(ssrRenderComponent(_component_NuxtLink, {
+    to: "#about",
+    class: "inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.2em] text-white/80 transition-colors hover:text-white"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<span class="h-px w-8 bg-white/50" data-v-58b8b470${_scopeId}></span> Discover more `);
+      } else {
+        return [
+          createVNode("span", { class: "h-px w-8 bg-white/50" }),
+          createTextVNode(" Discover more ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</div></div></div></div><div class="hero-bottom absolute bottom-0 left-0 right-0 z-10 flex items-end justify-between px-5 pb-8 sm:px-8 md:px-10 lg:px-16" data-v-58b8b470><a href="#about" class="flex flex-col items-center gap-3 text-white/50 transition hover:text-white/80" data-v-58b8b470><span class="text-[10px] font-medium uppercase tracking-[0.35em]" data-v-58b8b470>Scroll</span><span class="block h-10 w-px bg-gradient-to-b from-white/40 to-transparent" data-v-58b8b470></span></a><p class="text-[11px] font-medium uppercase tracking-[0.3em] text-white/40" data-v-58b8b470> Private · group · retreats </p></div></section>`);
+}
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/sections/HeroIsla.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const __nuxt_component_0 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-58b8b470"]]), { __name: "SectionsHeroIsla" });
+const _imports_0$1 = publicAssetsURL("/media/10.jpg");
+const useGsap = () => {
+  const nuxtApp = useNuxtApp();
+  const gsap = nuxtApp.$gsap;
+  const ScrollTrigger = nuxtApp.$ScrollTrigger;
+  const mm = gsap?.matchMedia ? gsap.matchMedia() : null;
+  return {
+    gsap,
+    ScrollTrigger,
+    matchMedia: mm
+  };
+};
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+  __name: "AboutSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const sectionEl = ref(null);
+    const imageEl = ref(null);
+    const contentEl = ref(null);
+    useGsap();
+    useReducedMotion();
+    const handleImageError = (event) => {
+      const img = event.target;
+      console.error("Image failed to load:", img.src);
+      img.src = "/media/1.jpg";
+    };
+    const keyPoints = [
+      "Certified (RYT 200+) — private & group sessions",
+      "Workshops and retreats in nature"
+    ];
+    const statsEl = ref(null);
+    const displayTrainees = ref(0);
+    const displayYears = ref(0);
+    const displayStyles = ref(0);
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_AppContainer = resolveComponent("AppContainer");
+      const _component_SectionHeading = resolveComponent("SectionHeading");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        ref_key: "sectionEl",
+        ref: sectionEl,
+        class: "about-section relative overflow-hidden bg-[var(--bg-body)] py-14 sm:py-20 md:py-28"
+      }, _attrs))} data-v-0b393a58>`);
+      _push(ssrRenderComponent(_component_AppContainer, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="mx-auto max-w-6xl px-6 sm:px-10 md:px-14 lg:px-20" data-v-0b393a58${_scopeId}><div class="mb-10 text-center sm:mb-16" data-v-0b393a58${_scopeId}>`);
+            _push2(ssrRenderComponent(_component_SectionHeading, {
+              eyebrow: "About Nawal",
+              title: "Yoga Instructor",
+              subtitle: "A journey of awareness, breath and movement"
+            }, null, _parent2, _scopeId));
+            _push2(`</div><div class="grid min-w-0 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center" data-v-0b393a58${_scopeId}><div class="trainer-image-wrapper relative order-2 lg:order-1" data-v-0b393a58${_scopeId}><div class="relative" data-v-0b393a58${_scopeId}><div class="image-container relative aspect-[3/4] overflow-hidden rounded-2xl bg-[var(--color-gray)]" data-v-0b393a58${_scopeId}><img${ssrRenderAttr("src", _imports_0$1)} alt="Nawal Omar - Yoga instructor" class="trainer-image h-full w-full object-cover" loading="eager" data-v-0b393a58${_scopeId}><div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" data-v-0b393a58${_scopeId}></div></div><div class="absolute -bottom-4 -right-4 hidden h-full w-full rounded-2xl border-2 border-[var(--accent-sage)]/20 -z-10 sm:block md:-bottom-6 md:-right-6" data-v-0b393a58${_scopeId}></div></div></div><div class="about-content order-1 space-y-8 lg:order-2" data-v-0b393a58${_scopeId}><div class="space-y-4" data-v-0b393a58${_scopeId}><h3 class="text-xl font-serif text-[var(--text-main)] sm:text-2xl md:text-3xl" data-v-0b393a58${_scopeId}> Nawal Omar </h3><p class="text-sm font-medium text-[var(--accent-sage)] uppercase tracking-wider" data-v-0b393a58${_scopeId}> Certified yoga instructor • Vinyasa, Yin, Hatha, meditation </p></div><div class="space-y-4 text-sm leading-relaxed text-[var(--text-soft)] sm:text-base md:text-lg" data-v-0b393a58${_scopeId}><p class="about-text" data-v-0b393a58${_scopeId}> Certified yoga instructor with over ten years of practice. Vinyasa, Yin, Hatha &amp; meditation—for beginners and advanced. Reconnect with your body, breath, and inner calm in the studio or in nature. </p></div><div class="space-y-3 border-t border-[var(--border-soft)] pt-6" data-v-0b393a58${_scopeId}><!--[-->`);
+            ssrRenderList(keyPoints, (point, index2) => {
+              _push2(`<div class="key-point flex items-start gap-4" data-v-0b393a58${_scopeId}><div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--accent-sage)]/10 mt-0.5" data-v-0b393a58${_scopeId}><div class="h-2 w-2 rounded-full bg-[var(--accent-sage)]" data-v-0b393a58${_scopeId}></div></div><p class="text-sm text-[var(--text-soft)] md:text-base" data-v-0b393a58${_scopeId}>${ssrInterpolate(point)}</p></div>`);
+            });
+            _push2(`<!--]--></div><div class="grid grid-cols-3 gap-4 border-t border-[var(--border-soft)] pt-6 sm:gap-6 sm:pt-8" data-v-0b393a58${_scopeId}><div class="stat-item text-center" data-v-0b393a58${_scopeId}><p class="text-2xl font-serif text-[var(--text-main)] sm:text-3xl md:text-4xl" data-v-0b393a58${_scopeId}>${ssrInterpolate(unref(displayTrainees))}+</p><p class="mt-1 text-[10px] text-[var(--text-soft)] uppercase tracking-wider sm:text-xs" data-v-0b393a58${_scopeId}>Trainees</p></div><div class="stat-item text-center" data-v-0b393a58${_scopeId}><p class="text-2xl font-serif text-[var(--text-main)] sm:text-3xl md:text-4xl" data-v-0b393a58${_scopeId}>${ssrInterpolate(unref(displayYears))}+</p><p class="mt-1 text-[10px] text-[var(--text-soft)] uppercase tracking-wider sm:text-xs" data-v-0b393a58${_scopeId}>Years</p></div><div class="stat-item text-center" data-v-0b393a58${_scopeId}><p class="text-2xl font-serif text-[var(--text-main)] sm:text-3xl md:text-4xl" data-v-0b393a58${_scopeId}>${ssrInterpolate(unref(displayStyles))}</p><p class="mt-1 text-[10px] text-[var(--text-soft)] uppercase tracking-wider sm:text-xs" data-v-0b393a58${_scopeId}>Yoga styles</p></div></div></div></div></div>`);
+          } else {
+            return [
+              createVNode("div", { class: "mx-auto max-w-6xl px-6 sm:px-10 md:px-14 lg:px-20" }, [
+                createVNode("div", { class: "mb-10 text-center sm:mb-16" }, [
+                  createVNode(_component_SectionHeading, {
+                    eyebrow: "About Nawal",
+                    title: "Yoga Instructor",
+                    subtitle: "A journey of awareness, breath and movement"
+                  })
+                ]),
+                createVNode("div", { class: "grid min-w-0 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center" }, [
+                  createVNode("div", {
+                    ref_key: "imageEl",
+                    ref: imageEl,
+                    class: "trainer-image-wrapper relative order-2 lg:order-1"
+                  }, [
+                    createVNode("div", { class: "relative" }, [
+                      createVNode("div", { class: "image-container relative aspect-[3/4] overflow-hidden rounded-2xl bg-[var(--color-gray)]" }, [
+                        createVNode("img", {
+                          src: _imports_0$1,
+                          alt: "Nawal Omar - Yoga instructor",
+                          class: "trainer-image h-full w-full object-cover",
+                          loading: "eager",
+                          onError: handleImageError
+                        }, null, 32),
+                        createVNode("div", { class: "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" })
+                      ]),
+                      createVNode("div", { class: "absolute -bottom-4 -right-4 hidden h-full w-full rounded-2xl border-2 border-[var(--accent-sage)]/20 -z-10 sm:block md:-bottom-6 md:-right-6" })
+                    ])
+                  ], 512),
+                  createVNode("div", {
+                    ref_key: "contentEl",
+                    ref: contentEl,
+                    class: "about-content order-1 space-y-8 lg:order-2"
+                  }, [
+                    createVNode("div", { class: "space-y-4" }, [
+                      createVNode("h3", { class: "text-xl font-serif text-[var(--text-main)] sm:text-2xl md:text-3xl" }, " Nawal Omar "),
+                      createVNode("p", { class: "text-sm font-medium text-[var(--accent-sage)] uppercase tracking-wider" }, " Certified yoga instructor • Vinyasa, Yin, Hatha, meditation ")
+                    ]),
+                    createVNode("div", { class: "space-y-4 text-sm leading-relaxed text-[var(--text-soft)] sm:text-base md:text-lg" }, [
+                      createVNode("p", { class: "about-text" }, " Certified yoga instructor with over ten years of practice. Vinyasa, Yin, Hatha & meditation—for beginners and advanced. Reconnect with your body, breath, and inner calm in the studio or in nature. ")
+                    ]),
+                    createVNode("div", { class: "space-y-3 border-t border-[var(--border-soft)] pt-6" }, [
+                      (openBlock(), createBlock(Fragment, null, renderList(keyPoints, (point, index2) => {
+                        return createVNode("div", {
+                          key: index2,
+                          class: "key-point flex items-start gap-4"
+                        }, [
+                          createVNode("div", { class: "flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--accent-sage)]/10 mt-0.5" }, [
+                            createVNode("div", { class: "h-2 w-2 rounded-full bg-[var(--accent-sage)]" })
+                          ]),
+                          createVNode("p", { class: "text-sm text-[var(--text-soft)] md:text-base" }, toDisplayString(point), 1)
+                        ]);
+                      }), 64))
+                    ]),
+                    createVNode("div", {
+                      ref_key: "statsEl",
+                      ref: statsEl,
+                      class: "grid grid-cols-3 gap-4 border-t border-[var(--border-soft)] pt-6 sm:gap-6 sm:pt-8"
+                    }, [
+                      createVNode("div", { class: "stat-item text-center" }, [
+                        createVNode("p", { class: "text-2xl font-serif text-[var(--text-main)] sm:text-3xl md:text-4xl" }, toDisplayString(unref(displayTrainees)) + "+", 1),
+                        createVNode("p", { class: "mt-1 text-[10px] text-[var(--text-soft)] uppercase tracking-wider sm:text-xs" }, "Trainees")
+                      ]),
+                      createVNode("div", { class: "stat-item text-center" }, [
+                        createVNode("p", { class: "text-2xl font-serif text-[var(--text-main)] sm:text-3xl md:text-4xl" }, toDisplayString(unref(displayYears)) + "+", 1),
+                        createVNode("p", { class: "mt-1 text-[10px] text-[var(--text-soft)] uppercase tracking-wider sm:text-xs" }, "Years")
+                      ]),
+                      createVNode("div", { class: "stat-item text-center" }, [
+                        createVNode("p", { class: "text-2xl font-serif text-[var(--text-main)] sm:text-3xl md:text-4xl" }, toDisplayString(unref(displayStyles)), 1),
+                        createVNode("p", { class: "mt-1 text-[10px] text-[var(--text-soft)] uppercase tracking-wider sm:text-xs" }, "Yoga styles")
+                      ])
+                    ], 512)
+                  ], 512)
+                ])
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</section>`);
+    };
+  }
+});
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/sections/AboutSection.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+};
+const __nuxt_component_1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["__scopeId", "data-v-0b393a58"]]), { __name: "SectionsAboutSection" });
+const _imports_0 = publicAssetsURL("/media/nawal_aom.mp4");
+function useScrollReveal(options) {
+  const el = ref(null);
+  const isVisible = ref(false);
+  return { el, isVisible };
+}
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+  __name: "VideoSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { el: revealEl, isVisible: isRevealed } = useScrollReveal();
+    const videoEl = ref(null);
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_AppContainer = resolveComponent("AppContainer");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        ref_key: "revealEl",
+        ref: revealEl,
+        class: ["video-section section-reveal relative overflow-hidden bg-[var(--color-gray)] py-10 sm:py-12 md:py-16", { "is-visible": unref(isRevealed) }],
+        id: "video"
+      }, _attrs))} data-v-0b981d86>`);
+      _push(ssrRenderComponent(_component_AppContainer, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="mx-auto max-w-6xl" data-v-0b981d86${_scopeId}><div class="grid min-w-0 gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-10" data-v-0b981d86${_scopeId}><div class="video-side lg:order-1 lg:flex lg:flex-col lg:items-center" data-v-0b981d86${_scopeId}><div class="video-column-content lg:w-full lg:max-w-[340px]" data-v-0b981d86${_scopeId}><div class="mb-6 text-center sm:mb-8 lg:mb-6 lg:text-left" data-v-0b981d86${_scopeId}><p class="mb-2 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-accent)]" data-v-0b981d86${_scopeId}> Practice &amp; presence </p><h2 class="font-serif text-2xl font-light text-[var(--color-text)] sm:text-3xl md:text-4xl" data-v-0b981d86${_scopeId}> A moment of calm </h2></div><div class="video-frame group relative" data-v-0b981d86${_scopeId}><div class="absolute -inset-px rounded-2xl bg-gradient-to-b from-[var(--color-primary)]/40 via-[var(--color-primary)]/20 to-[var(--color-primary)]/40 opacity-80 transition-opacity duration-300 group-hover:opacity-100" data-v-0b981d86${_scopeId}></div><div class="relative mx-auto max-w-[280px] overflow-hidden rounded-2xl bg-[var(--color-secondary)] shadow-xl ring-1 ring-black/5 sm:max-w-[320px] md:max-w-[360px] lg:max-w-full" data-v-0b981d86${_scopeId}><div class="aspect-[9/16] w-full relative" data-v-0b981d86${_scopeId}><video class="h-full w-full object-cover"${ssrRenderAttr("src", _imports_0)} playsinline loop preload="metadata" data-v-0b981d86${_scopeId}> Your browser does not support the video tag. </video></div><div class="absolute inset-x-0 bottom-0 h-16 pointer-events-none rounded-b-2xl bg-gradient-to-t from-black/15 to-transparent" data-v-0b981d86${_scopeId}></div></div></div><p class="mt-4 text-center text-sm text-[var(--color-secondary)] lg:text-left" data-v-0b981d86${_scopeId}> Nawal Omar · Yoga &amp; mindfulness </p></div></div><div class="story-side hidden lg:flex lg:order-2 lg:flex-col lg:justify-center lg:items-center lg:px-4" data-v-0b981d86${_scopeId}><div class="w-full max-w-md text-center" data-v-0b981d86${_scopeId}><p class="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-[var(--color-accent)]" data-v-0b981d86${_scopeId}> My story </p><h3 class="mb-3 font-serif text-xl font-medium text-[var(--color-text)]" data-v-0b981d86${_scopeId}> Nawal Omar </h3><p class="mb-4 text-sm leading-relaxed text-[var(--color-secondary)]" data-v-0b981d86${_scopeId}> I&#39;m a certified yoga instructor with over ten years of practice and teaching. What started as my personal search for calm and flexibility became a path to share yoga with others—Vinyasa, Yin, Hatha, and guided meditation. </p><p class="text-sm leading-relaxed text-[var(--color-secondary)] sm:text-base" data-v-0b981d86${_scopeId}> Whether in the studio or in nature, I design every session to help you reconnect with your body, breath, and inner stillness. I believe yoga is for everyone: gentle movement, mindful breath, and moments of silence that bring you back to yourself. </p></div></div></div></div>`);
+          } else {
+            return [
+              createVNode("div", { class: "mx-auto max-w-6xl" }, [
+                createVNode("div", { class: "grid min-w-0 gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-10" }, [
+                  createVNode("div", { class: "video-side lg:order-1 lg:flex lg:flex-col lg:items-center" }, [
+                    createVNode("div", { class: "video-column-content lg:w-full lg:max-w-[340px]" }, [
+                      createVNode("div", { class: "mb-6 text-center sm:mb-8 lg:mb-6 lg:text-left" }, [
+                        createVNode("p", { class: "mb-2 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-accent)]" }, " Practice & presence "),
+                        createVNode("h2", { class: "font-serif text-2xl font-light text-[var(--color-text)] sm:text-3xl md:text-4xl" }, " A moment of calm ")
+                      ]),
+                      createVNode("div", { class: "video-frame group relative" }, [
+                        createVNode("div", { class: "absolute -inset-px rounded-2xl bg-gradient-to-b from-[var(--color-primary)]/40 via-[var(--color-primary)]/20 to-[var(--color-primary)]/40 opacity-80 transition-opacity duration-300 group-hover:opacity-100" }),
+                        createVNode("div", { class: "relative mx-auto max-w-[280px] overflow-hidden rounded-2xl bg-[var(--color-secondary)] shadow-xl ring-1 ring-black/5 sm:max-w-[320px] md:max-w-[360px] lg:max-w-full" }, [
+                          createVNode("div", { class: "aspect-[9/16] w-full relative" }, [
+                            createVNode("video", {
+                              ref_key: "videoEl",
+                              ref: videoEl,
+                              class: "h-full w-full object-cover",
+                              src: _imports_0,
+                              playsinline: "",
+                              loop: "",
+                              preload: "metadata"
+                            }, " Your browser does not support the video tag. ", 512)
+                          ]),
+                          createVNode("div", { class: "absolute inset-x-0 bottom-0 h-16 pointer-events-none rounded-b-2xl bg-gradient-to-t from-black/15 to-transparent" })
+                        ])
+                      ]),
+                      createVNode("p", { class: "mt-4 text-center text-sm text-[var(--color-secondary)] lg:text-left" }, " Nawal Omar · Yoga & mindfulness ")
+                    ])
+                  ]),
+                  createVNode("div", { class: "story-side hidden lg:flex lg:order-2 lg:flex-col lg:justify-center lg:items-center lg:px-4" }, [
+                    createVNode("div", { class: "w-full max-w-md text-center" }, [
+                      createVNode("p", { class: "mb-2 text-xs font-medium uppercase tracking-[0.3em] text-[var(--color-accent)]" }, " My story "),
+                      createVNode("h3", { class: "mb-3 font-serif text-xl font-medium text-[var(--color-text)]" }, " Nawal Omar "),
+                      createVNode("p", { class: "mb-4 text-sm leading-relaxed text-[var(--color-secondary)]" }, " I'm a certified yoga instructor with over ten years of practice and teaching. What started as my personal search for calm and flexibility became a path to share yoga with others—Vinyasa, Yin, Hatha, and guided meditation. "),
+                      createVNode("p", { class: "text-sm leading-relaxed text-[var(--color-secondary)] sm:text-base" }, " Whether in the studio or in nature, I design every session to help you reconnect with your body, breath, and inner stillness. I believe yoga is for everyone: gentle movement, mindful breath, and moments of silence that bring you back to yourself. ")
+                    ])
+                  ])
+                ])
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</section>`);
+    };
+  }
+});
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/sections/VideoSection.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$4, [["__scopeId", "data-v-0b981d86"]]), { __name: "SectionsVideoSection" });
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+  __name: "MomentsGallerySection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { el: revealEl, isVisible: isRevealed } = useScrollReveal();
+    const images = [
+      { src: "/media/1.jpg", alt: "Yoga session" },
+      { src: "/media/4.jpg", alt: "Practice in nature" },
+      { src: "/media/7.jpg", alt: "Vinyasa flow" },
+      { src: "/media/9.jpg", alt: "Yin and meditation" },
+      { src: "/media/11.jpg", alt: "Yoga retreat" }
+    ];
+    const currentIndex = ref(0);
+    const total = images.length;
+    function stackPosition(index2) {
+      const order = (index2 - currentIndex.value + total) % total;
+      return total - 1 - order;
+    }
+    const transforms = [
+      { x: -8, y: 8, r: -4 },
+      { x: -4, y: 4, r: -2 },
+      { x: 0, y: 0, r: 0 },
+      { x: 4, y: -4, r: 2 },
+      { x: 8, y: -8, r: 4 }
+    ];
+    function cardStyle(index2) {
+      const pos = stackPosition(index2);
+      const t = transforms[pos];
+      return {
+        zIndex: pos + 1,
+        "--tx": `${t.x}px`,
+        "--ty": `${t.y}px`,
+        "--rotate": `${t.r}deg`
+      };
+    }
+    function next() {
+      currentIndex.value = (currentIndex.value + 1) % total;
+    }
+    function prev() {
+      currentIndex.value = (currentIndex.value - 1 + total) % total;
+    }
+    const touchStartX = ref(0);
+    const touchEndX = ref(0);
+    function onTouchStart(e) {
+      touchStartX.value = e.touches[0].clientX;
+    }
+    function onTouchMove(e) {
+      touchEndX.value = e.touches[0].clientX;
+    }
+    function onTouchEnd() {
+      const diff = touchStartX.value - touchEndX.value;
+      const minSwipe = 50;
+      if (diff > minSwipe) next();
+      else if (diff < -minSwipe) prev();
+    }
+    const stackWrapRef = ref(null);
+    const isDragging = ref(false);
+    const mouseStartX = ref(0);
+    const mouseEndX = ref(0);
+    function onMouseDown(e) {
+      if (e.button !== 0) return;
+      isDragging.value = true;
+      mouseStartX.value = e.clientX;
+      mouseEndX.value = e.clientX;
+      const onMouseMove = (e2) => {
+        mouseEndX.value = e2.clientX;
+      };
+      const onMouseUp = () => {
+        isDragging.value = false;
+        const diff = mouseStartX.value - mouseEndX.value;
+        const minDrag = 40;
+        if (diff > minDrag) next();
+        else if (diff < -minDrag) prev();
+        (void 0).removeEventListener("mousemove", onMouseMove);
+        (void 0).removeEventListener("mouseup", onMouseUp);
+      };
+      (void 0).addEventListener("mousemove", onMouseMove);
+      (void 0).addEventListener("mouseup", onMouseUp);
+    }
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_AppContainer = resolveComponent("AppContainer");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        ref_key: "revealEl",
+        ref: revealEl,
+        class: ["moments-gallery section-reveal relative overflow-x-hidden bg-[var(--color-secondary)] py-16 sm:py-20 md:py-24", { "is-visible": unref(isRevealed) }],
+        id: "moments"
+      }, _attrs))} data-v-0c8af031><div class="moments-side-deco left" aria-hidden="true" data-v-0c8af031><span class="moments-side-blur moments-blur-1" data-v-0c8af031></span><span class="moments-side-blur moments-blur-2" data-v-0c8af031></span><span class="moments-side-word" data-v-0c8af031>Calm</span></div><div class="moments-side-deco right" aria-hidden="true" data-v-0c8af031><span class="moments-side-blur moments-blur-1" data-v-0c8af031></span><span class="moments-side-blur moments-blur-2" data-v-0c8af031></span><span class="moments-side-word" data-v-0c8af031>Flow</span></div><div class="relative z-10" data-v-0c8af031>`);
+      _push(ssrRenderComponent(_component_AppContainer, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="mx-auto max-w-4xl" data-v-0c8af031${_scopeId}><div class="mb-12 text-center sm:mb-16" data-v-0c8af031${_scopeId}><p class="mb-2 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-primary)]" data-v-0c8af031${_scopeId}> Images &amp; moments </p><h2 class="font-serif text-2xl font-light text-white sm:text-3xl md:text-4xl" data-v-0c8af031${_scopeId}> Glimpses of practice &amp; calm </h2></div></div><div class="stack-area lg:px-16" data-v-0c8af031${_scopeId}><div class="${ssrRenderClass([{ "is-dragging": unref(isDragging) }, "stack-wrap"])}" data-v-0c8af031${_scopeId}><!--[-->`);
+            ssrRenderList(images, (item, index2) => {
+              _push2(`<div class="stack-card" style="${ssrRenderStyle(cardStyle(index2))}" data-v-0c8af031${_scopeId}><div class="stack-card-inner" data-v-0c8af031${_scopeId}><img${ssrRenderAttr("src", item.src)}${ssrRenderAttr("alt", item.alt)} class="stack-card-img" loading="lazy" data-v-0c8af031${_scopeId}></div></div>`);
+            });
+            _push2(`<!--]--></div><button type="button" class="stack-btn stack-btn--prev" aria-label="Previous image" data-v-0c8af031${_scopeId}><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-0c8af031${_scopeId}><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" data-v-0c8af031${_scopeId}></path></svg></button><button type="button" class="stack-btn stack-btn--next" aria-label="Next image" data-v-0c8af031${_scopeId}><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-0c8af031${_scopeId}><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" data-v-0c8af031${_scopeId}></path></svg></button></div><p class="mt-6 flex items-center justify-center gap-2 text-center text-sm text-white/70" data-v-0c8af031${_scopeId}><span class="swipe-icon" aria-hidden="true" data-v-0c8af031${_scopeId}><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-0c8af031${_scopeId}><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" data-v-0c8af031${_scopeId}></path></svg></span> Swipe or drag to browse </p>`);
+          } else {
+            return [
+              createVNode("div", { class: "mx-auto max-w-4xl" }, [
+                createVNode("div", { class: "mb-12 text-center sm:mb-16" }, [
+                  createVNode("p", { class: "mb-2 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-primary)]" }, " Images & moments "),
+                  createVNode("h2", { class: "font-serif text-2xl font-light text-white sm:text-3xl md:text-4xl" }, " Glimpses of practice & calm ")
+                ])
+              ]),
+              createVNode("div", { class: "stack-area lg:px-16" }, [
+                createVNode("div", {
+                  ref_key: "stackWrapRef",
+                  ref: stackWrapRef,
+                  class: ["stack-wrap", { "is-dragging": unref(isDragging) }],
+                  onTouchstart: onTouchStart,
+                  onTouchmove: onTouchMove,
+                  onTouchend: onTouchEnd,
+                  onMousedown: onMouseDown
+                }, [
+                  (openBlock(), createBlock(Fragment, null, renderList(images, (item, index2) => {
+                    return createVNode("div", {
+                      key: item.src,
+                      class: "stack-card",
+                      style: cardStyle(index2)
+                    }, [
+                      createVNode("div", { class: "stack-card-inner" }, [
+                        createVNode("img", {
+                          src: item.src,
+                          alt: item.alt,
+                          class: "stack-card-img",
+                          loading: "lazy"
+                        }, null, 8, ["src", "alt"])
+                      ])
+                    ], 4);
+                  }), 64))
+                ], 34),
+                createVNode("button", {
+                  type: "button",
+                  class: "stack-btn stack-btn--prev",
+                  "aria-label": "Previous image",
+                  onClick: prev
+                }, [
+                  (openBlock(), createBlock("svg", {
+                    class: "h-5 w-5",
+                    fill: "none",
+                    stroke: "currentColor",
+                    viewBox: "0 0 24 24"
+                  }, [
+                    createVNode("path", {
+                      "stroke-linecap": "round",
+                      "stroke-linejoin": "round",
+                      "stroke-width": "2",
+                      d: "M15 19l-7-7 7-7"
+                    })
+                  ]))
+                ]),
+                createVNode("button", {
+                  type: "button",
+                  class: "stack-btn stack-btn--next",
+                  "aria-label": "Next image",
+                  onClick: next
+                }, [
+                  (openBlock(), createBlock("svg", {
+                    class: "h-5 w-5",
+                    fill: "none",
+                    stroke: "currentColor",
+                    viewBox: "0 0 24 24"
+                  }, [
+                    createVNode("path", {
+                      "stroke-linecap": "round",
+                      "stroke-linejoin": "round",
+                      "stroke-width": "2",
+                      d: "M9 5l7 7-7 7"
+                    })
+                  ]))
+                ])
+              ]),
+              createVNode("p", { class: "mt-6 flex items-center justify-center gap-2 text-center text-sm text-white/70" }, [
+                createVNode("span", {
+                  class: "swipe-icon",
+                  "aria-hidden": "true"
+                }, [
+                  (openBlock(), createBlock("svg", {
+                    class: "h-5 w-5",
+                    fill: "none",
+                    stroke: "currentColor",
+                    viewBox: "0 0 24 24"
+                  }, [
+                    createVNode("path", {
+                      "stroke-linecap": "round",
+                      "stroke-linejoin": "round",
+                      "stroke-width": "2",
+                      d: "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                    })
+                  ]))
+                ]),
+                createTextVNode(" Swipe or drag to browse ")
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></section>`);
+    };
+  }
+});
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/sections/MomentsGallerySection.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const __nuxt_component_3 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$3, [["__scopeId", "data-v-0c8af031"]]), { __name: "SectionsMomentsGallerySection" });
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+  __name: "WorkshopsSection",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { el: revealEl, isVisible: isRevealed } = useScrollReveal();
+    const workshops = [
+      {
+        id: "al-tira",
+        tag: "Al-Tira",
+        title: "Al-Tira Yoga",
+        description: "Experience freedom in the air. Suspension-based practice for strength, flexibility and playfulness—suitable for all levels.",
+        cta: "Discover more",
+        image: "/media/Al-Tira.jpg"
+      },
+      {
+        id: "jiva",
+        tag: "Jiva Yoga",
+        title: "Jiva Yoga",
+        description: "Connect body, breath and mind. A holistic approach blending movement, meditation and mindfulness in a supportive space.",
+        cta: "Learn more",
+        image: "/media/Jiva.jpg"
+      },
+      {
+        id: "retreat",
+        tag: "Retreat",
+        title: "Retreat",
+        description: "Step away from the everyday. Multi-day yoga retreats in nature—deep practice, rest and connection with like-minded souls.",
+        cta: "Explore retreats",
+        image: "/media/retreat.jpg"
+      }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_AppContainer = resolveComponent("AppContainer");
+      _push(`<section${ssrRenderAttrs(mergeProps({
+        ref_key: "revealEl",
+        ref: revealEl,
+        class: ["workshops-section section-reveal relative overflow-hidden bg-[var(--bg-body)] py-16 sm:py-20 md:py-24", { "is-visible": unref(isRevealed) }],
+        id: "workshops"
+      }, _attrs))} data-v-0bceafcf>`);
+      _push(ssrRenderComponent(_component_AppContainer, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="mx-auto max-w-6xl px-6 sm:px-10 md:px-14 lg:px-20" data-v-0bceafcf${_scopeId}><div class="mb-12 text-center sm:mb-16" data-v-0bceafcf${_scopeId}><p class="mb-2 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-accent)]" data-v-0bceafcf${_scopeId}> Workshops </p><h2 class="font-serif text-2xl font-light text-[var(--color-text)] sm:text-3xl md:text-4xl" data-v-0bceafcf${_scopeId}> Al-Tira · Jiva · Retreat </h2></div><div class="grid gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-8" data-v-0bceafcf${_scopeId}><!--[-->`);
+            ssrRenderList(workshops, (workshop, index2) => {
+              _push2(`<article class="workshop-card group" data-v-0bceafcf${_scopeId}><div class="workshop-card-inner flex flex-col overflow-hidden" data-v-0bceafcf${_scopeId}><div class="workshop-card-image-wrap" data-v-0bceafcf${_scopeId}><img${ssrRenderAttr("src", workshop.image)}${ssrRenderAttr("alt", workshop.title)} class="workshop-card-image" loading="lazy" data-v-0bceafcf${_scopeId}></div><div class="workshop-card-body flex flex-col flex-1" data-v-0bceafcf${_scopeId}><div class="workshop-card-header" data-v-0bceafcf${_scopeId}><span class="workshop-card-tag" data-v-0bceafcf${_scopeId}>${ssrInterpolate(workshop.tag)}</span><h3 class="workshop-card-title font-serif" data-v-0bceafcf${_scopeId}>${ssrInterpolate(workshop.title)}</h3></div><p class="workshop-card-desc" data-v-0bceafcf${_scopeId}>${ssrInterpolate(workshop.description)}</p><div class="workshop-card-footer" data-v-0bceafcf${_scopeId}><span class="workshop-card-cta" data-v-0bceafcf${_scopeId}>${ssrInterpolate(workshop.cta)} <span class="inline-block transition-transform duration-200 group-hover:translate-x-1" data-v-0bceafcf${_scopeId}>→</span></span></div></div></div></article>`);
+            });
+            _push2(`<!--]--></div></div>`);
+          } else {
+            return [
+              createVNode("div", { class: "mx-auto max-w-6xl px-6 sm:px-10 md:px-14 lg:px-20" }, [
+                createVNode("div", { class: "mb-12 text-center sm:mb-16" }, [
+                  createVNode("p", { class: "mb-2 text-xs font-medium uppercase tracking-[0.35em] text-[var(--color-accent)]" }, " Workshops "),
+                  createVNode("h2", { class: "font-serif text-2xl font-light text-[var(--color-text)] sm:text-3xl md:text-4xl" }, " Al-Tira · Jiva · Retreat ")
+                ]),
+                createVNode("div", { class: "grid gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-8" }, [
+                  (openBlock(), createBlock(Fragment, null, renderList(workshops, (workshop, index2) => {
+                    return createVNode("article", {
+                      key: workshop.id,
+                      class: "workshop-card group"
+                    }, [
+                      createVNode("div", { class: "workshop-card-inner flex flex-col overflow-hidden" }, [
+                        createVNode("div", { class: "workshop-card-image-wrap" }, [
+                          createVNode("img", {
+                            src: workshop.image,
+                            alt: workshop.title,
+                            class: "workshop-card-image",
+                            loading: "lazy",
+                            onError: (e) => e.target.src = "/media/5.jpg"
+                          }, null, 40, ["src", "alt", "onError"])
+                        ]),
+                        createVNode("div", { class: "workshop-card-body flex flex-col flex-1" }, [
+                          createVNode("div", { class: "workshop-card-header" }, [
+                            createVNode("span", { class: "workshop-card-tag" }, toDisplayString(workshop.tag), 1),
+                            createVNode("h3", { class: "workshop-card-title font-serif" }, toDisplayString(workshop.title), 1)
+                          ]),
+                          createVNode("p", { class: "workshop-card-desc" }, toDisplayString(workshop.description), 1),
+                          createVNode("div", { class: "workshop-card-footer" }, [
+                            createVNode("span", { class: "workshop-card-cta" }, [
+                              createTextVNode(toDisplayString(workshop.cta) + " ", 1),
+                              createVNode("span", { class: "inline-block transition-transform duration-200 group-hover:translate-x-1" }, "→")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]);
+                  }), 64))
+                ])
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</section>`);
+    };
+  }
+});
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/sections/WorkshopsSection.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
+const __nuxt_component_4 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$2, [["__scopeId", "data-v-0bceafcf"]]), { __name: "SectionsWorkshopsSection" });
+const whatsappUrl = "https://wa.me/966500000000";
+const instagramUrl = "https://instagram.com/nawalaom";
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "FooterIsla",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { el: revealEl, isVisible: isRevealed } = useScrollReveal();
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_AppContainer = resolveComponent("AppContainer");
+      const _component_NuxtLink = __nuxt_component_0$1;
+      _push(`<footer${ssrRenderAttrs(mergeProps({
+        ref_key: "revealEl",
+        ref: revealEl,
+        class: ["footer-isla section-reveal border-t border-[var(--color-primary)]/25 bg-[#faf8f5]", { "is-visible": unref(isRevealed) }]
+      }, _attrs))} data-v-776d6571>`);
+      _push(ssrRenderComponent(_component_AppContainer, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="flex justify-center pt-10 pb-2 sm:pt-10 sm:pb-3 md:pt-12 md:pb-4" data-v-776d6571${_scopeId}>`);
+            _push2(ssrRenderComponent(_component_NuxtLink, {
+              to: "/",
+              class: "inline-block transition-opacity hover:opacity-90"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<img${ssrRenderAttr("src", _imports_0$2)} alt="Nawal Omar Yoga" class="footer-logo h-20 w-auto max-w-[260px] object-contain sm:h-24 md:h-28" data-v-776d6571${_scopeId2}>`);
+                } else {
+                  return [
+                    createVNode("img", {
+                      src: _imports_0$2,
+                      alt: "Nawal Omar Yoga",
+                      class: "footer-logo h-20 w-auto max-w-[260px] object-contain sm:h-24 md:h-28"
+                    })
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><p class="text-center text-sm leading-relaxed text-[var(--color-secondary)] max-w-xs mx-auto pb-6 sm:pb-7" data-v-776d6571${_scopeId}> Where yoga meets calm and quality </p><nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm pb-6 sm:pb-7 md:gap-x-8" aria-label="Quick links" data-v-776d6571${_scopeId}>`);
+            _push2(ssrRenderComponent(_component_NuxtLink, {
+              to: "/",
+              class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(` Home `);
+                } else {
+                  return [
+                    createTextVNode(" Home ")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_NuxtLink, {
+              to: "#about",
+              class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(` About `);
+                } else {
+                  return [
+                    createTextVNode(" About ")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_NuxtLink, {
+              to: "#video",
+              class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(` Video `);
+                } else {
+                  return [
+                    createTextVNode(" Video ")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_component_NuxtLink, {
+              to: "#workshops",
+              class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(` Workshops `);
+                } else {
+                  return [
+                    createTextVNode(" Workshops ")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</nav><div class="flex items-center justify-center gap-3 pb-10 sm:pb-12 md:pb-14" aria-label="Social links" data-v-776d6571${_scopeId}><a${ssrRenderAttr("href", whatsappUrl)} target="_blank" rel="noopener noreferrer" class="footer-social flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)]/20 hover:text-[var(--color-accent)]" aria-label="WhatsApp" data-v-776d6571${_scopeId}><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" data-v-776d6571${_scopeId}><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.865 9.865 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" data-v-776d6571${_scopeId}></path></svg></a><a${ssrRenderAttr("href", instagramUrl)} target="_blank" rel="noopener noreferrer" class="footer-social flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)]/20 hover:text-[var(--color-accent)]" aria-label="Instagram" data-v-776d6571${_scopeId}><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" data-v-776d6571${_scopeId}><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" data-v-776d6571${_scopeId}></path></svg></a></div><div class="border-t border-[var(--color-primary)]/20 py-4 text-center" data-v-776d6571${_scopeId}><p class="text-xs text-[var(--color-secondary)]" data-v-776d6571${_scopeId}> © ${ssrInterpolate((/* @__PURE__ */ new Date()).getFullYear())} Nawal Omar. All rights reserved. </p></div>`);
+          } else {
+            return [
+              createVNode("div", { class: "flex justify-center pt-10 pb-2 sm:pt-10 sm:pb-3 md:pt-12 md:pb-4" }, [
+                createVNode(_component_NuxtLink, {
+                  to: "/",
+                  class: "inline-block transition-opacity hover:opacity-90"
+                }, {
+                  default: withCtx(() => [
+                    createVNode("img", {
+                      src: _imports_0$2,
+                      alt: "Nawal Omar Yoga",
+                      class: "footer-logo h-20 w-auto max-w-[260px] object-contain sm:h-24 md:h-28"
+                    })
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("p", { class: "text-center text-sm leading-relaxed text-[var(--color-secondary)] max-w-xs mx-auto pb-6 sm:pb-7" }, " Where yoga meets calm and quality "),
+              createVNode("nav", {
+                class: "flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm pb-6 sm:pb-7 md:gap-x-8",
+                "aria-label": "Quick links"
+              }, [
+                createVNode(_component_NuxtLink, {
+                  to: "/",
+                  class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(" Home ")
+                  ]),
+                  _: 1
+                }),
+                createVNode(_component_NuxtLink, {
+                  to: "#about",
+                  class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(" About ")
+                  ]),
+                  _: 1
+                }),
+                createVNode(_component_NuxtLink, {
+                  to: "#video",
+                  class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(" Video ")
+                  ]),
+                  _: 1
+                }),
+                createVNode(_component_NuxtLink, {
+                  to: "#workshops",
+                  class: "footer-link text-[var(--color-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(" Workshops ")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", {
+                class: "flex items-center justify-center gap-3 pb-10 sm:pb-12 md:pb-14",
+                "aria-label": "Social links"
+              }, [
+                createVNode("a", {
+                  href: whatsappUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  class: "footer-social flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)]/20 hover:text-[var(--color-accent)]",
+                  "aria-label": "WhatsApp"
+                }, [
+                  (openBlock(), createBlock("svg", {
+                    class: "h-5 w-5",
+                    fill: "currentColor",
+                    viewBox: "0 0 24 24",
+                    "aria-hidden": "true"
+                  }, [
+                    createVNode("path", { d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.865 9.865 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" })
+                  ]))
+                ]),
+                createVNode("a", {
+                  href: instagramUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  class: "footer-social flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)]/20 hover:text-[var(--color-accent)]",
+                  "aria-label": "Instagram"
+                }, [
+                  (openBlock(), createBlock("svg", {
+                    class: "h-5 w-5",
+                    fill: "currentColor",
+                    viewBox: "0 0 24 24",
+                    "aria-hidden": "true"
+                  }, [
+                    createVNode("path", { d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" })
+                  ]))
+                ])
+              ]),
+              createVNode("div", { class: "border-t border-[var(--color-primary)]/20 py-4 text-center" }, [
+                createVNode("p", { class: "text-xs text-[var(--color-secondary)]" }, " © " + toDisplayString((/* @__PURE__ */ new Date()).getFullYear()) + " Nawal Omar. All rights reserved. ", 1)
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</footer>`);
+    };
+  }
+});
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/sections/FooterIsla.vue");
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
+const __nuxt_component_5 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-776d6571"]]), { __name: "SectionsFooterIsla" });
+const _sfc_main = {};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+  const _component_SectionsHeroIsla = __nuxt_component_0;
+  const _component_SectionsAboutSection = __nuxt_component_1;
+  const _component_SectionsVideoSection = __nuxt_component_2;
+  const _component_SectionsMomentsGallerySection = __nuxt_component_3;
+  const _component_SectionsWorkshopsSection = __nuxt_component_4;
+  const _component_SectionsFooterIsla = __nuxt_component_5;
+  _push(`<main${ssrRenderAttrs(mergeProps({ class: "min-w-0 overflow-x-hidden" }, _attrs))}>`);
+  _push(ssrRenderComponent(_component_SectionsHeroIsla, null, null, _parent));
+  _push(ssrRenderComponent(_component_SectionsAboutSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_SectionsVideoSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_SectionsMomentsGallerySection, null, null, _parent));
+  _push(ssrRenderComponent(_component_SectionsWorkshopsSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_SectionsFooterIsla, null, null, _parent));
+  _push(`</main>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+
+export { index as default };
+//# sourceMappingURL=index-CZHhMrgh.mjs.map

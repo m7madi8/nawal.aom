@@ -46,16 +46,17 @@
    - New Project → استيراد الريبو (Import Git Repository).
    - اختر الريبو الخاص بمشروع "nowal aom".
 
-3. **إعدادات البناء (عادةً تلقائية)**
+3. **إعدادات البناء (إلزامية لهذا المشروع)**
    - **Framework Preset:** Nuxt (يُختار تلقائياً).
-   - **Build Command:** `npm run build` أو `nuxt build`.
-   - **Output Directory:** يترك فارغاً أو كما يقترح فيرسل (Nuxt يحدده تلقائياً).
+   - **Build Command:** `npm run build` فقط (**لا تستخدم** `nuxt build` مباشرة).
+   - **Output Directory:** يترك فارغاً (لا تضع `.output`).
    - **Install Command:** `npm install`.
 
 4. **نشر المشروع**
    - اضغط Deploy.
    - بعد انتهاء البناء، فيرسل يعطيك رابطاً مثل:  
      `https://your-project.vercel.app`
+   - عند تكرار خطأ سابق، استخدم **Redeploy** مع **Clear build cache**.
 
 5. **(اختياري) نطاق مخصص**
    - من لوحة المشروع في فيرسل: Settings → Domains لإضافة دومينك الخاص.
@@ -68,6 +69,19 @@
 - **اللغة والاتجاه:** الموقع مضبوط في الـ head على `lang="en"` و `dir="ltr"`. إذا أردت واجهة عربية كاملة، يمكن لاحقاً تغييرها إلى `ar` و `dir="rtl"` في `nuxt.config.ts`.
 - **تشغيل محلي قبل النشر:**  
   `npm run dev` ثم فتح الرابط الظاهر في الطرفية (راجع `START-SERVER.md`).
+
+### تحقق سريع من نجاح الإصلاح (خطأ 126)
+
+- في سجل البناء على Vercel يجب أن ترى:
+  - `Running "npm run build"`
+  - `node ./node_modules/nuxt/bin/nuxt.mjs build`
+- يجب **ألا** يظهر:
+  - `Command "nuxt build" exited with 126`
+- إذا عاد نفس الخطأ:
+  1. Settings → Build & Development Settings
+  2. تأكد أن **Build Command** = `npm run build` (وليس `nuxt build`)
+  3. **Output Directory** فارغ
+  4. أعد النشر مع **Clear build cache**
 
 ---
 
