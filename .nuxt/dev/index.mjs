@@ -2042,7 +2042,7 @@ const _TXd07HW7yVdYc_yFerBILEuB8zIh8xB0QHR2RyoWYIQ = (function(nitro) {
 
 const rootDir = "C:/Users/eslam/Desktop/My projects/nowal aom";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"},{"name":"description","content":"Yoga with a certified instructor. Vinyasa, Yin, Hatha & meditation—private and group sessions, workshops and retreats. Yoga for everyone."}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap"}],"style":[],"script":[],"noscript":[],"htmlAttrs":{"lang":"en","dir":"ltr"},"title":"Nawal Omar"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"},{"name":"description","content":"Yoga with a certified instructor. Vinyasa, Yin, Hatha & meditation—private and group sessions, workshops and retreats. Yoga for everyone."}],"link":[{"rel":"icon","type":"image/png","href":"/media/Nawal_yoga_logo.png"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap"}],"style":[],"script":[],"noscript":[],"htmlAttrs":{"lang":"en","dir":"ltr"},"title":"Nawal Omar"};
 
 const appRootTag = "div";
 
@@ -2147,7 +2147,22 @@ const plugins = [
 _UfXxGLs4F1VnouyV1PTNOLvpvmXXgXcEALXXMiSJfY
 ];
 
-const assets = {};
+const assets = {
+  "/index.mjs": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"1a691-mrJI9EyDjfC9p62hoMmtPE3+CEA\"",
+    "mtime": "2026-02-19T00:35:38.801Z",
+    "size": 108177,
+    "path": "index.mjs"
+  },
+  "/index.mjs.map": {
+    "type": "application/json",
+    "etag": "\"6b2d2-DK7uVYegecRIy6D3bElt/0Ij4Xg\"",
+    "mtime": "2026-02-19T00:35:38.801Z",
+    "size": 438994,
+    "path": "index.mjs.map"
+  }
+};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));
